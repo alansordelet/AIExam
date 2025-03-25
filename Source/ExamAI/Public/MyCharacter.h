@@ -25,6 +25,14 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	void Look(const FInputActionValue& Value);
+	void CrouchIA(const FInputActionValue& Value);
+	void Move(const FInputActionValue& Value);
+	void Sprint(const FInputActionValue& Value);
+
+	bool bSprint;
+	bool bSneak;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
